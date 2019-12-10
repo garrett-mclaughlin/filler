@@ -1,0 +1,11 @@
+<div class="container">
+    <div *ngFor="let tile of board.tiles" [style.backgroundColor]="tile.color">{{tile.ownedBy}}</div>
+</div>
+
+<div class="togglers">
+    <div *ngFor="let color of colors" class="toggle" (click)="toggleColor(color)" [style.backgroundColor]="color" [ngClass]="{'minimized': color === player1color || color === player2color}"></div>
+</div>
+
+<div>
+    <h3>Player {{currentTurn}}'s Turn</h3>
+</div>
